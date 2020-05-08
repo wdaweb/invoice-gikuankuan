@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<?php
-$pageheader="輸入發票頁";
-include "./layout/topbar.php";?>
+<?php include "./layout/header.php";?>  
 </body>
 </html>
