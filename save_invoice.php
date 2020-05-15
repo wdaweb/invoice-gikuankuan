@@ -26,7 +26,7 @@ $res=$pdo -> exec($sql);
 
 if($res==1){
  echo "新增成功";
- header('location:http://localhost/invoice/');
+ header('location:http://localhost/invoice/list.php');
 //  新增成功跳到首頁
 }else{
     echo "新增失敗";
