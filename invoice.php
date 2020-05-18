@@ -1,7 +1,7 @@
 <?php include_once "connect.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<title>各期獎號</title>
 <head>
 
 

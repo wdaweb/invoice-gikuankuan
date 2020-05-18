@@ -7,7 +7,10 @@
 
 <div class="navbar navbar-dark bg-dark">
   <ul class="nav">
-    <li class="nav-item">
+  <li class="nav-item">
+      <a class="nav-link" href="../invoice/index.php">回首頁</a>
+    </li>
+  <li class="nav-item">
       <a class="nav-link active" href="../invoice/list.php">發票列表</a>
     </li>
 
@@ -17,9 +20,6 @@
 
     <li class="nav-item">
       <a class="nav-link" href="../invoice/award.php">對獎</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="../invoice/index.php">回首頁</a>
     </li>
   </ul>
 </div>

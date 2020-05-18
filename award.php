@@ -1,7 +1,7 @@
 <?php include_once "connect.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<title>對獎</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
