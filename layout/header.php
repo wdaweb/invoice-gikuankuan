@@ -5,10 +5,10 @@
 
 
 
-<div class="navbar navbar-dark bg-dark">
+<div class="navbar navbar-expand-md navbar-dark bg-dark">
   <ul class="nav">
   <li class="nav-item">
-      <a class="nav-link" href="../invoice/index.php">回首頁</a>
+      <a class="nav-link " href="../invoice/index.php">回首頁</a>
     </li>
   <li class="nav-item">
       <a class="nav-link active" href="../invoice/list.php">發票列表</a>

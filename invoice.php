@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>各期獎號</title>
+
 <head>
 
 
@@ -25,15 +26,18 @@
             </tr>
             <tr>
                 <td>特別獎</td>
-                <td>1213213</td>
+                <td><input class="form-control" type="number" name="num1"></td>
             </tr>
             <tr>
                 <td>特獎</td>
-                <td>1231231</td>
+                <td><input class="form-control" type="number" name="num2"></td>
             </tr>
             <tr>
                 <td>頭獎</td>
-                <td>2132132131</td>
+                <td><input class="form-control" type="number" name="num3[]"><br>
+            <input class="form-control" type="number" name="num3[]"><br>
+            <input class="form-control" type="number" name="num3[]"><br>
+            <input class="form-control" type="number" name="num3[]"><br></td>
             </tr>
             <tr>
                 <td>二獎</td>
@@ -57,11 +61,12 @@
             </tr>
             <tr>
                 <td>增開六獎</td>
-                <td>121</td>
+                <td><input class="form-control" type="number" name="num4[]"><br>
+                    <input class="form-control" type="number" name="num4[]"></td>
             </tr>
-
-
         </table>
+        <input class="btn btn-outline-primary  p-3" type="submit" value="送出">
+        
     </div>
 </body>
 
