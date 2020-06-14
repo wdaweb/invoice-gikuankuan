@@ -38,22 +38,22 @@
         $rows = $pdo->query($sql)->fetchAll();
         ?>
         <div class="d-flex justify-content-center">
-            <table class="m-3">
+            <table class="m-1">
                 <tr>
-                    <td class="p-1">編號</td>
-                    <td class="p-1">標記</td>
-                    <td class="p-1">號碼</td>
-                    <td class="p-1">花費</td>
+                    <td class="p-2">編號</td>
+                    <td class="p-2">標記</td>
+                    <td class="p-2">號碼</td>
+                    <td class="p-2">花費</td>
                 </tr>
                 <?php
 
                 foreach ($rows as $row) {
                 ?>
                     <tr>
-                        <td><?= $row['id']; ?></td>
-                        <td><?= $row['code']; ?></td>
-                        <td><?= $row['number']; ?></td>
-                        <td><?= $row['expend']; ?></td>
+                        <td class="p-2"><?= $row['id']; ?></td>
+                        <td class="p-2"><?= $row['code']; ?></td>
+                        <td class="p-2"><?= $row['number']; ?></td>
+                        <td class="p-2"><?= $row['expend']; ?></td>
                     </tr>
                 <?php } ?>
             </table>

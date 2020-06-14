@@ -18,6 +18,7 @@
 <body>
     <div class="form1">
         <?php include "./layout/header.php"; ?>
+        <a href="add_invoice.php"><button>新增開獎獎號</button></a>
         <table class="table text-center">
             <tr>
                 <td>年月份</td>
