@@ -15,7 +15,7 @@ include_once "connect.php";
 
 $table = "award";
 
-$yeat=$_POST['year'];
+$year=$_POST['year'];
 $period=$_POST['period'];
 
 $num1 = $_POST['num1'];
@@ -37,25 +37,28 @@ $num2 = $_POST['num2'];
 save($table,$data);
 //特別獎2
 
-$num1 = $_POST['num3'];
+$num3 = $_POST['num3'];
+foreach($num3 as $num){
     $data=[
         "year"=> $year,
         "period"=>$period,
-        "number"=>$num3,
+        "number"=>$num,
         "type"=>3,
     ];
 save($table,$data);
+}
 //特別獎3
 
 
-$num1 = $_POST['num4'];
+$num4 = $_POST['num4'];
+foreach($num4 as $num){
     $data=[
         "year"=> $year,
         "period"=>$period,
-        "number"=>$num4,
+        "number"=>$num,
         "type"=>4,
     ];
-save($table,$data);
+save($table,$data);}
 //特別獎4
 
 
