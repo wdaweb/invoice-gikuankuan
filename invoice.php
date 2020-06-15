@@ -13,7 +13,7 @@ $monthStr = [
 if (isset($_GET['period'])) {
     $period = $_GET['period'];
 }
-$year = date("Y"); 
+$year = date("Y");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,62 +35,84 @@ $year = date("Y");
     <div class="form1">
         <?php include "./layout/header.php"; ?>
         <a href="add_invoice.php"><button class="btn-1 p-1 m-2">新增開獎獎號</button></a>
-        <select name="period">
-             <option value="1"><a href="invoice.php?period=1" style="background:<?=($period==1)?'lightgreen':'white';?>">1,2月</a></option>
-             <option value="2"><a href="invoice.php?period=2" style="background:<?=($period==2)?'lightgreen':'white';?>">3,4月</a></option>
-             <option value="3"><a href="invoice.php?period=3" style="background:<?=($period==3)?'lightgreen':'white';?>">5,6月</a></option>
-             <option value="4"><a href="invoice.php?period=4" style="background:<?=($period==4)?'lightgreen':'white';?>">7,8月</a></option>
-             <option value="5"><a href="invoice.php?period=5" style="background:<?=($period==5)?'lightgreen':'white';?>">9,10月</a></option>
-             <option value="6"><a href="invoice.php?period=6" style="background:<?=($period==6)?'lightgreen':'white';?>">11,12月</a></option>
+        <select name="period" onchange="location.href=this.options[this.selectedIndex].value">
+            <option>選擇月份</option>
+            <option value="invoice.php?period=1">1,2月</option>
+            <option value="invoice.php?period=2">3,4月</option>
+            <option value="invoice.php?period=3">5,6月</option>
+            <option value="invoice.php?period=4">7,8月</option>
+            <option value="invoice.php?period=5">9,10月</option>
+            <option value="invoice.php?period=6">11,12月</option>
         </select>
 
+        <?php
+        $num1 = find('award', ['period' => $period, 'year' => $year, 'type' => 1]); //單筆
+        $num2 = find('award', ['period' => $period, 'year' => $year, 'type' => 2]); //單筆
+        $num3 = all('award', ['period' => $period, 'year' => $year, 'type' => 3]); //多筆
+        $num4 = all('award', ['period' => $period, 'year' => $year, 'type' => 4]); //多筆
 
-        
+        ?>
+
 
         <table class="table text-center">
             <tr>
                 <td>年月份</td>
-                <td>109年01~02月</td>
+                <td><?= $year; ?>年 <?= $monthStr[$period]; ?></td>
             </tr>
             <tr>
                 <td>特別獎</td>
-                <td><input class="form-control" type="number" name="num1"></td>
+                <td><?php
+                    if (!empty($num1['number'])) {
+                        echo $num1['number'];
+                    };
+
+                    ?></td>
             </tr>
             <tr>
                 <td>特獎</td>
-                <td><input class="form-control" type="number" name="num2"></td>
+                <td><?php
+                    if (!empty($num2['number'])) {
+                        echo $num2['number'];
+                    };
+
+                    ?></td>
             </tr>
             <tr>
                 <td>頭獎</td>
-                <td><input class="form-control" type="number" name="num3[]"><br>
-                    <input class="form-control" type="number" name="num3[]"><br>
-                    <input class="form-control" type="number" name="num3[]"><br>
-                    <input class="form-control" type="number" name="num3[]"><br></td>
+                <td> <?php
+                        foreach ($num3 as $num) {
+                            echo $num['number'] . "<br>";
+                        }
+
+                        ?></td>
             </tr>
             <tr>
                 <td>二獎</td>
-                <td></td>
+                <td>末7 位數號碼與頭獎中獎號碼末7 位相同者各得獎金4萬元</td>
             </tr>
             <tr>
                 <td>三獎</td>
-                <td></td>
+                <td>末6 位數號碼與頭獎中獎號碼末6 位相同者各得獎金1萬元</td>
             </tr>
             <tr>
                 <td>四獎</td>
-                <td></td>
+                <td>末5 位數號碼與頭獎中獎號碼末5 位相同者各得獎金4千元</td>
             </tr>
             <tr>
                 <td>五獎</td>
-                <td></td>
+                <td>末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金1千元</td>
             </tr>
             <tr>
                 <td>六獎</td>
-                <td></td>
+                <td>末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元</td>
             </tr>
             <tr>
                 <td>增開六獎</td>
-                <td><input class="form-control" type="number" name="num4[]">
-
+                <td><?php
+                    foreach ($num4 as $num) {
+                        echo $num['number'] . "<br>";
+                    }
+                    ?>
             </tr>
         </table>
     </div>
