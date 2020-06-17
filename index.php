@@ -14,14 +14,20 @@
         <link rel="stylesheet" href="./css/bootstrap.css">
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/jquery-3.5.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+            * {
+                font-family: 'Lato', sans-serif;
+            }
+        </style>
     </head>
 
     <body>
         <div>
             <?php include "./layout/header.php"; ?>
-            <form action="save_invoice.php" method="post">
+            <form action="save_invoice.php" method="post" class="form">
                 <h3>期別：</h3>
-                <select name="period">
+                <select name="period" class="btn btn-secondary dropdown-toggle">
                     <option value="1">1-2月</option>
                     <option value="2">3-4月</option>
                     <option value="3">5-6月</option>
@@ -30,7 +36,7 @@
                     <option value="6">11-12</option>
                 </select>
                 <h3>年份：</h3>
-                <select name="year">
+                <select name="year" class="btn btn-secondary dropdown-toggle">
                     <option value="1">2020</option>
                     <option value="2">2021</option>
                     <option value="3">2022</option>

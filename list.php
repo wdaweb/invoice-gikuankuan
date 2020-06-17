@@ -1,4 +1,5 @@
 <?php include_once "connect.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <title>發票列表</title>
@@ -11,6 +12,13 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+            * {
+                font-family: 'Lato', sans-serif;
+            }
+        </style>
 </head>
 
 <body>

@@ -1,3 +1,11 @@
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+            * {
+                font-family: 'Lato', sans-serif;
+            }
+        </style>
+
+
 <?php include_once "connect.php";
 $period = ceil(date("n") / 2);
 

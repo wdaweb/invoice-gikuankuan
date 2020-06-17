@@ -124,3 +124,4 @@ function save($table,$arg){
 function to ($url){
     header("location:".$url);
 }
+
