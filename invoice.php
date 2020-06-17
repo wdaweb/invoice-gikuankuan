@@ -45,6 +45,8 @@ $year = date("Y");
             <option value="invoice.php?period=6">11,12月</option>
         </select>
 
+        <a href="award.php?period=<?=$period?>"><button class="btn-1 p-1 m-2">一次兌獎囉！</button></a>
+
         <?php
         $num1 = find('award', ['period' => $period, 'year' => $year, 'type' => 1]); //單筆
         $num2 = find('award', ['period' => $period, 'year' => $year, 'type' => 2]); //單筆
@@ -67,6 +69,9 @@ $year = date("Y");
                     };
 
                     ?></td>
+                     <td>
+                        <a class="btn btn-outline-secondary" href="award.php?aw=1&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                    </td>
             </tr>
             <tr>
                 <td>特獎</td>
@@ -75,7 +80,9 @@ $year = date("Y");
                         echo $num2['number'];
                     };
 
-                    ?></td>
+                    ?></td> <td>
+                    <a class="btn btn-outline-secondary" href="award.php?aw=2&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                </td>
             </tr>
             <tr>
                 <td>頭獎</td>
@@ -84,7 +91,9 @@ $year = date("Y");
                             echo $num['number'] . "<br>";
                         }
 
-                        ?></td>
+                        ?></td> <td>
+                        <a class="btn btn-outline-secondary" href="award.php?aw=3&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                    </td>
             </tr>
             <tr>
                 <td>二獎</td>
@@ -112,8 +121,10 @@ $year = date("Y");
                     foreach ($num4 as $num) {
                         echo $num['number'] . "<br>";
                     }
-                    ?>
-            </tr>
+                    ?><td>
+                    <a class="btn btn-outline-secondary" href="award.php?aw=9&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                </td>
+            </tr>  
         </table>
     </div>
 </body>
