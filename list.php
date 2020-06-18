@@ -24,12 +24,12 @@
         <h3 class="d-flex justify-content-center">發票列表</h3>
         <div class="d-flex justify-content-center">
             <ul class="nav">
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">1 (1,2)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=2">2 (3,4)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=3">3 (1,6)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=4">4 (7,8)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">1 (9,10)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=6">6 (11,12)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">第一期<br>(1,2)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=2">第二期<br>(3,4)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=3">第三期<br>(1,6)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=4">第四期<br>(7,8)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">第五期<br>(9,10)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=6">第六期<br>(11,12)</a></button></li>
             </ul>
         </div>
         <?php

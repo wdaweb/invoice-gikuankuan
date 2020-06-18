@@ -56,7 +56,7 @@
         <?php
 
         if (empty($_GET)) {
-            echo "請選擇要對獎的項目<a href='invoice.php'>各期獎號</a>";
+            echo "<div style='margin:auto;'><h3 >請選擇要對獎的項目<a href='invoice.php'>各期獎號</a></h3></div>";
             exit();
         }
 

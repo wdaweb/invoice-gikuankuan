@@ -9,6 +9,11 @@
     
 }
 
+body{
+    background-image: url("../db/purple_money_rain.gif");
+    background-size: cover;
+    background-repeat: repeat;
+}
 
 .header{
     height:100px;

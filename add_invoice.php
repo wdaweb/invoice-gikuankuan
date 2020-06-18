@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?php include_once "title.html"; ?>
     <div class="form1">
         <?php include "./layout/header.php";
         include_once "connect.php";
@@ -19,7 +20,7 @@
                 <tr>
                     <td>年月份</td>
                     <td>
-                        <input type="number" name="year" >
+                        <input type="number" name="year">
 
                         <select name="period">
                             <option value="1">1,2月</option>
@@ -32,7 +33,7 @@
 
                     </td>
                 </tr>
-                
+
                 <tr>
                     <td>特別獎</td>
                     <td><input type="number" name="num1"></td>
@@ -49,7 +50,7 @@
                         <input type="number" name="num3[]" class="m-1"><br>
                         <input type="number" name="num3[]" class="m-1"><br>
                         <input type="number" name="num3[]" class="m-1"><br>
-                        
+
                     </td>
                 </tr>
 
