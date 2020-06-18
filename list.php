@@ -13,12 +13,7 @@
     <script src="./js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <style>
-            * {
-                font-family: 'Lato', sans-serif;
-            }
-        </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 
 <body>

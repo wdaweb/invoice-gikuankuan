@@ -2,18 +2,40 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    
+}
+body{
+    background-image: url(../db/money.jpg);
+    /* background-size: cover; */
+    background-repeat: repeat;
+}
+h1{
+    font-family: 'Lato', sans-serif;
 }
 .header{
-    height:50px;
+    height:100px;
     border:1px solid #999;
     box-shadow: 0 0 5px #ccc;
-    background: lightblue;
-    
+    background: #c79100;
+    margin: auto;
+    align-items: center;
+    font-size: 2rem;
+}
+.nav-item:hover{
+    height:100px;
+    border:1px solid #999;
+    box-shadow: 0 0 5px #ccc;
+    background: #fff350;
+    margin: auto;
+    align-items: center;
+    font-size: 2rem;
 }
 .form1{
     width: 600px;
     height:700px;
-    background: lightgoldenrodyellow;
+    background: #ffc107;
     margin:auto;
 }
 form{
@@ -25,3 +47,17 @@ form{
     line-height:30px;
    
 }
+.short{
+    align-items: center;
+}
+.table2{
+margin: auto;
+width: 80%;
+line-height: 20px;
+text-align: center;
+
+}
+.table2  td{
+    height: 80px;
+    
+    }
