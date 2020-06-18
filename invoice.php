@@ -1,9 +1,4 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <style>
-            * {
-                font-family: 'Lato', sans-serif;
-            }
-        </style>
 
 
 <?php include_once "connect.php";
@@ -40,21 +35,24 @@ $year = date("Y");
 </head>
 
 <body>
-    <div class="form1">
-        <?php include "./layout/header.php"; ?>
-        <a href="add_invoice.php"><button class="btn-1 p-1 m-2">新增開獎獎號</button></a>
-        <select name="period" onchange="location.href=this.options[this.selectedIndex].value">
-            <option>選擇月份</option>
-            <option value="invoice.php?period=1">1,2月</option>
-            <option value="invoice.php?period=2">3,4月</option>
-            <option value="invoice.php?period=3">5,6月</option>
-            <option value="invoice.php?period=4">7,8月</option>
-            <option value="invoice.php?period=5">9,10月</option>
-            <option value="invoice.php?period=6">11,12月</option>
-        </select>
+    <?php include_once "title.html"; ?>
+    
+        <div class="form1">
+            <?php include_once "./layout/header.php"; ?>
+            <div style="width:60%;margin:auto;">
+            <a href="add_invoice.php"><button class="btn-1 p-1 m-2">新增開獎獎號</button></a>
+            <select name="period" onchange="location.href=this.options[this.selectedIndex].value">
+                <option>選擇月份</option>
+                <option value="invoice.php?period=1">1,2月</option>
+                <option value="invoice.php?period=2">3,4月</option>
+                <option value="invoice.php?period=3">5,6月</option>
+                <option value="invoice.php?period=4">7,8月</option>
+                <option value="invoice.php?period=5">9,10月</option>
+                <option value="invoice.php?period=6">11,12月</option>
+            </select>
 
-        <a href="award.php?period=<?=$period?>"><button class="btn-1 p-1 m-2">一次兌獎囉！</button></a>
-
+            <a href="award.php?period=<?= $period ?>"><button class="btn-1 p-1 m-2">一次兌獎囉！</button></a>
+        </div>
         <?php
         $num1 = find('award', ['period' => $period, 'year' => $year, 'type' => 1]); //單筆
         $num2 = find('award', ['period' => $period, 'year' => $year, 'type' => 2]); //單筆
@@ -77,9 +75,9 @@ $year = date("Y");
                     };
 
                     ?></td>
-                     <td>
-                        <a class="btn btn-outline-secondary" href="award.php?aw=1&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
-                    </td>
+                <td>
+                    <a class="btn btn-outline-secondary" href="award.php?aw=1&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                </td>
             </tr>
             <tr>
                 <td>特獎</td>
@@ -88,7 +86,8 @@ $year = date("Y");
                         echo $num2['number'];
                     };
 
-                    ?></td> <td>
+                    ?></td>
+                <td>
                     <a class="btn btn-outline-secondary" href="award.php?aw=2&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
                 </td>
             </tr>
@@ -99,9 +98,10 @@ $year = date("Y");
                             echo $num['number'] . "<br>";
                         }
 
-                        ?></td> <td>
-                        <a class="btn btn-outline-secondary" href="award.php?aw=3&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
-                    </td>
+                        ?></td>
+                <td>
+                    <a class="btn btn-outline-secondary" href="award.php?aw=3&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
+                </td>
             </tr>
             <tr>
                 <td>二獎</td>
@@ -129,10 +129,11 @@ $year = date("Y");
                     foreach ($num4 as $num) {
                         echo $num['number'] . "<br>";
                     }
-                    ?><td>
+                    ?>
+                <td>
                     <a class="btn btn-outline-secondary" href="award.php?aw=9&year=<?= $year; ?>&period=<?= $period; ?>">對獎</a>
                 </td>
-            </tr>  
+            </tr>
         </table>
     </div>
 </body>

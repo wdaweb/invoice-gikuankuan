@@ -1,4 +1,4 @@
-<div class="form1">
+
     <?php include_once "connect.php"; ?>
     <!-- include PDO 很方便 -->
 
@@ -19,6 +19,8 @@
     </head>
 
     <body>
+    <?php include_once "title.html"; ?>
+    <div class="form1">
         <div>
             <?php include "./layout/header.php"; ?>
             <form action="save_invoice.php" method="post" class="form">
@@ -48,10 +50,19 @@
                     </tr>
                     <tr>
                         <td class="short">
-                            <h4> 獎號：</h4><input type="text" name="code">
+                            <h4> 獎號(前兩碼)：</h4>
+                            
+                        </td>
+                        <td><input type="text" name="code"></td>
+                       
+                    </tr>
+                    <tr>
+                        <td class="short">
+                            <h4> 獎號(數字)：</h4>
                             
                         </td>
                         <td><input type="number" name="number"></td>
+                        
                     </tr>
                     <tr>
                         <td class="short">
@@ -60,7 +71,7 @@
                         <td><input type="number" name="expend"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="儲存" style="width:10rem;height:5rem;"></td>
+                        <td colspan="2"><input type="submit" value="儲存" style="width:10rem;height:5rem;"></td>
                     </tr>
                 </table>
 

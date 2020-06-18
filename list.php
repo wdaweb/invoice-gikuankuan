@@ -17,18 +17,19 @@
 </head>
 
 <body>
+<?php include_once "title.html"; ?>
     <div class="form1">
         <?php include "./layout/header.php"; ?>
 
-        <h1 class="d-flex justify-content-center">發票列表</h1>
+        <h3 class="d-flex justify-content-center">發票列表</h3>
         <div class="d-flex justify-content-center">
             <ul class="nav">
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=1">1 (1,2)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=2">2 (3,4)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=3">3 (1,6)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=4">4 (7,8)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=1">1 (9,10)</a></button></li>
-                <li><button class="btn btn-outline-primary p-2"><a href="list.php?period=6">6 (11,12)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">1 (1,2)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=2">2 (3,4)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=3">3 (1,6)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=4">4 (7,8)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=1">1 (9,10)</a></button></li>
+                <li><button class="btn btn-outline-primary p-2 m-1"><a href="list.php?period=6">6 (11,12)</a></button></li>
             </ul>
         </div>
         <?php
@@ -43,20 +44,20 @@
         <div class="d-flex justify-content-center">
             <table class="m-1">
                 <tr>
-                    <td class="p-2">編號</td>
-                    <td class="p-2">標記</td>
-                    <td class="p-2">號碼</td>
-                    <td class="p-2">花費</td>
+                    <td class="p-2 m-1">編號</td>
+                    <td class="p-2 m-1">標記</td>
+                    <td class="p-2 m-1">號碼</td>
+                    <td class="p-2 m-1">花費</td>
                 </tr>
                 <?php
 
                 foreach ($rows as $row) {
                 ?>
                     <tr>
-                        <td class="p-2"><?= $row['id']; ?></td>
-                        <td class="p-2"><?= $row['code']; ?></td>
-                        <td class="p-2"><?= $row['number']; ?></td>
-                        <td class="p-2"><?= $row['expend']; ?></td>
+                        <td class="p-2 m-1"><?= $row['id']; ?></td>
+                        <td class="p-2 m-1"><?= $row['code']; ?></td>
+                        <td class="p-2 m-1"><?= $row['number']; ?></td>
+                        <td class="p-2 m-1"><?= $row['expend']; ?></td>
                     </tr>
                 <?php } ?>
             </table>

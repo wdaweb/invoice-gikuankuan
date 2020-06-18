@@ -4,25 +4,35 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
+<head>
 
+<style>
+  .b:hover{
+    background: #fff350;
+    border-radius: 50px;
+    opacity: 90%;
+  }
 
-<div class="navbar navbar-expand header">
+</style>
+</head>
+
+<div class="navbar navbar-expand header" style="border-radius: 30px;">
   <ul class="nav">
-    <div class="nav-item">
+    <div class="nav-item b">
       <button class="btn">
-        <a class="nav-link " href="./index.php">回首頁</a>
+        <a class="nav-link " href="./index.php"><p>回首頁</p></a>
       </button>
     </div>
-    <div class="nav-item"><button class="btn">
-        <a class="nav-link active" href="./list.php">發票列表</a></button>
+    <div class="nav-item b"><button class="btn">
+        <a class="nav-link active" href="./list.php"><p>發票列表</p></a></button>
     </div>
 
-    <div class="nav-item"><button class="btn">
-        <a class="nav-link" href="./invoice.php">各期獎號</a></button>
+    <div class="nav-item b"><button class="btn">
+        <a class="nav-link" href="./invoice.php"><p>各期獎號</p></a></button>
     </div>
 
-    <div class="nav-item"><button class="btn">
-        <a class="nav-link" href="./award.php">對獎</a></button>
+    <div class="nav-item b"><button class="btn">
+        <a class="nav-link" href="./award.php"><p>對獎</p></a></button>
     </div>
   </ul>
 </div>

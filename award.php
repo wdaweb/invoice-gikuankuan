@@ -10,14 +10,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <style>
-            * {
-                font-family: 'Lato', sans-serif;
-            }
-        </style>
+     
 </head>
 
 <body>
+<?php include_once "title.html"; ?>
     <div class="form1">
         <?php include "./layout/header.php"; ?>
         <?php
